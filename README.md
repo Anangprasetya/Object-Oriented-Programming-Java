@@ -50,3 +50,59 @@ Usahakan class yang terdapat method main, di compile paling akhir. Lalu jalankan
 ```sh
 java Main
 ```
+
+
+
+# Membuat Pakcage Java
+Buat folder terlebih dahulu dengan perintah
+```sh
+mkdir program
+```
+Lalu masuk ke folder
+
+```sh
+cd program/
+```
+
+Didalam folder program buat file dengan nama `coba.java` dan `main.java`. Lalu ketikkan kode dibawah untuk file **coba.java**
+```java
+package projectsaya;
+
+
+class Mahasiswa {
+	protected String nama;
+	protected String no;
+}
+```
+
+Lalu ketikkan kode dibawah ini juga untuk file **main.java**
+```java
+package projectsaya;
+
+class Run extends Mahasiswa {
+	Run(String nama, String no){
+		this.nama = nama;
+		this.no = no;
+	}
+	void sapa(){
+		System.out.println("   Hello " + this.nama + " dengan no - " + this.no);
+	}
+
+	public static void main(String[] args) {
+		Run obj = new Run("nama kamu", "20");
+		obj.sapa();
+	}
+}
+```
+
+Lalu compile kedua file tersebut dengan perintah berikut
+```sh
+javac -d . coba.java
+```
+- -d -> untuk memberitahu compiler bahwa terdapat package
+- .  -> path folder (letak folder hasil compile kita nanti)
+
+lalu compile file main.java sama seperti diatas
+```sh
+javac -d . main.java
+```
