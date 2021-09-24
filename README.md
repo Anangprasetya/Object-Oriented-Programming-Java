@@ -106,3 +106,9 @@ lalu compile file main.java sama seperti diatas
 ```sh
 javac -d . main.java
 ```
+
+Setelah itu jalankan class terdapat method mainnya dengan menambahkan nama package seperti dibawah ini
+
+```sh
+java projectsaya.Run
+```
